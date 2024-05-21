@@ -1,0 +1,154 @@
+.header {
+  background-color: #fe2722;
+  position: sticky;
+  z-index: 9;
+  top: 0;
+  left: 0;
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__nav__left {
+    img {
+      width: 150px;
+    }
+  }
+  &__nav__right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    img {
+      width: 20px;
+    }
+  }
+
+  &__nav__right__loges {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0px 10px;
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &__nav__form {
+    position: relative;
+    width: 500px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 6px;
+    input {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+      border: none;
+    }
+    button {
+      right: 10px;
+      top: 5px;
+      position: absolute;
+      padding: 10px 30px;
+      background-color: #ccff66;
+      border: none;
+      border-radius: 20px;
+      color: gray;
+    }
+  }
+
+  &__nav__right__logo {
+    cursor: pointer;
+    background-color: #aaa3;
+    backdrop-filter: blur(3px);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    span {
+      font-size: 12px;
+      color: white;
+    }
+  }
+
+  @media (max-width: 1050px) {
+    &__nav__form {
+      input {
+        width: 200px;
+        padding: 10px 10px;
+      }
+      button {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__nav__form {
+      position: relative;
+      width: 500px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 6px;
+      input {
+        width: 100%;
+        padding: 10px;
+        outline: none;
+        border: none;
+      }
+      button {
+        right: 20px;
+        top: 18px;
+        position: absolute;
+        padding: 5px 10px;
+        background-color: #ccff66;
+        border: none;
+        border-radius: 20px;
+        color: gray;
+      }
+    }
+    &__nav__left {
+      display: none;
+    }
+
+    &__nav__right__logo {
+      display: none;
+    }
+
+    &__nav {
+      display: block;
+    }
+
+    &__nav__form {
+      background-color: #aaa3;
+      width: 100%;
+      padding: 10px;
+      display: flex;
+
+      input {
+        width: 100%;
+        padding: 20px 10px;
+      }
+      button {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__nav__form {
+      padding: 8px 10px;
+      input {
+        padding: 10px 10px !important;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+}
